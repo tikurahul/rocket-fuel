@@ -8,8 +8,30 @@ chrome.runtime.onInstalled.addListener(details => {
 });
 
 const onInstalled = (details) => {
-
+  // bootstraps well known preferences
+  bootstrap();
 }
+
+const bootstrap = () => {
+  Preferences.all()
+    .then(results => {
+      const hasResults = results && results.length > 0;
+      if (!hasResults) {
+        const pairs = [
+          {short: 'g', full: 'https://www.google.com'},
+          {short: 'c', full: 'https://calendar.google.com'},
+          {short: 'inbox', full: 'https://inbox.google.com'},
+          {short: 'drive', full: 'https://drive.google.com'},
+          {short: 'mail', full: 'https://mail.google.com'},
+          {short: 'maps', full: 'https://maps.google.com'},
+          {short: 'docs', full: 'https://docs.google.com'}
+        ];
+        return Preferences.addMultiple(pairs).then(() => {
+          Logger.log('Basic preferences bootstrapped.');
+        });
+      }
+    });
+};
 
 const onInputChanged = (text, suggest) => {
   Preferences.match(text).then(results => {
