@@ -31,4 +31,4 @@ npm run-script build
 
 ## Download Chrome Extension
 
-The Chrome extension is available to download (here)[https://chrome.google.com/webstore/detail/rocket-fuel/nacifdngbdljbokjfafefojlocjopebl].
+The Chrome extension is available for download [here](https://chrome.google.com/webstore/detail/rocket-fuel/nacifdngbdljbokjfafefojlocjopebl).
