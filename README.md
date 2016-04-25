@@ -15,7 +15,6 @@ Open a New Tab, and type `go`+`TAB` in the Omnibar, which activates the extensio
 npm install
 npm install -g browserify
 npm install -g watchify
-mkdir -p app/scripts/out
 npm start
 npm run-script background
 ```
@@ -23,5 +22,5 @@ npm run-script background
 ## Building
 
 ```bash
-npm build
+npm run-script build
 ```
