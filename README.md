@@ -28,3 +28,7 @@ npm run-script background
 ```bash
 npm run-script build
 ```
+
+## Download Chrome Extension
+
+The Chrome extension is available to download (here)[https://chrome.google.com/webstore/detail/rocket-fuel/nacifdngbdljbokjfafefojlocjopebl].
