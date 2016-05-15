@@ -70,7 +70,6 @@ const onInputEntered = (fragment) => {
         Preferences.all()
           .then(results => {
             const urls = results.map(item => item.full);
-            debugger;
             if (urls.indexOf(fragment) >= 0) {
               navigate(fragment);
             }
